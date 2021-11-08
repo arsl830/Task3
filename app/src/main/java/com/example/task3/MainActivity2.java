@@ -46,6 +46,42 @@ public class MainActivity2 extends AppCompatActivity {
                 setQuizQuestion(currentPos);
             }
         });
+        option2Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option2Btn.getText().toString().trim().toLowerCase()));
+                {
+                    currentScore++;
+                }
+                questionAttempted++;
+                currentPos = random.nextInt(quizArrayList.size());
+                setQuizQuestion(currentPos);
+            }
+        });
+        option3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option3Btn.getText().toString().trim().toLowerCase()));
+                {
+                    currentScore++;
+                }
+                questionAttempted++;
+                currentPos = random.nextInt(quizArrayList.size());
+                setQuizQuestion(currentPos);
+            }
+        });
+        option4Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option4Btn.getText().toString().trim().toLowerCase()));
+                {
+                    currentScore++;
+                }
+                questionAttempted++;
+                currentPos = random.nextInt(quizArrayList.size());
+                setQuizQuestion(currentPos);
+            }
+        });
     }
 
     private void getQuizQuestion(ArrayList<Quiz> quizArrayList) {
