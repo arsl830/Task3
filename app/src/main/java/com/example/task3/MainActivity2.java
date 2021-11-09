@@ -107,10 +107,16 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     private void getQuizQuestion (ArrayList < Quiz > quizArrayList) {
-        quizArrayList.add(new Quiz("aaaaa", "a", "b", "c", "d", "a"));
-        quizArrayList.add(new Quiz("bbbbb", "a", "b", "c", "d", "a"));
-        quizArrayList.add(new Quiz("ccccc", "a", "b", "c", "d", "a"));
-        quizArrayList.add(new Quiz("ddddd", "a", "b", "c", "d", "a"));
+        quizArrayList.add(new Quiz("By speaking أ ہ the sound produced from", "end of throat", "middle of throat", "start of throat", "Base of Tongue which is near Uvula touching the mouth roof", "end of throat"));
+        quizArrayList.add(new Quiz("By speaking ع ح the sound produced from", "end of throat", "middle of throat", "start of throat", "Base of Tongue which is near Uvula touching the mouth roof", "middle of throat"));
+        quizArrayList.add(new Quiz("By speaking غ خ the sound produced from", "end of throat", "middle of throat", "start of throat", "Base of Tongue which is near Uvula touching the mouth roof", "start of throat"));
+        quizArrayList.add(new Quiz("By speaking ق the sound produced from", "end of throat", "middle of throat", "start of throat", "Base of Tongue which is near Uvula touching the mouth roof", "Base of Tongue which is near Uvula touching the mouth roof"));
+        quizArrayList.add(new Quiz("By speaking ک the sound produced from", "Portion of Tongue near its base touching the roof of mouth", "middle of throat", "start of throat", "Base of Tongue which is near Uvula touching the mouth roof", "Portion of Tongue near its base touching the roof of mouth"));
+        quizArrayList.add(new Quiz("By speaking ج ش ی the sound produced from", "end of throat", "middle of throat", "start of throat", "Tongue touching the center of the mouth roof", "Tongue touching the center of the mouth roof"));
+        quizArrayList.add(new Quiz("By speaking ض the sound produced from", "end of throat", "middle of throat", "start of throat", "One side of the tongue touching the molar teeth", "One side of the tongue touching the molar teeth"));
+        quizArrayList.add(new Quiz("By speaking ل the sound produced from", "end of throat", "middle of throat", "start of throat", "Rounded tip of the tongue touching the base of the frontal 8 teeth", "Rounded tip of the tongue touching the base of the frontal 8 teeth"));
+        quizArrayList.add(new Quiz("By speaking ن the sound produced from", "end of throat", "middle of throat", "start of throat", "Rounded tip of the tongue touching the base of the frontal 6 teeth", "Rounded tip of the tongue touching the base of the frontal 6 teeth"));
+        quizArrayList.add(new Quiz("By speaking ت د ط the sound produced from", "end of throat", "middle of throat", "start of throat", "Tip of the tongue touching the base of the front 2 teeth", "Tip of the tongue touching the base of the front 2 teeth"));
     }
     private void setQuizQuestion ( int currentPos){
         noq.setText("Questions attempted: " + questionAttempted + "/10");
