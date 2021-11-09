@@ -45,7 +45,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option1Btn.getText().toString().trim().toLowerCase()))
-                    ;
+
                 {
                     currentScore++;
                 }
@@ -58,7 +58,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option2Btn.getText().toString().trim().toLowerCase()))
-                    ;
+
                 {
                     currentScore++;
                 }
@@ -71,7 +71,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option3Btn.getText().toString().trim().toLowerCase()))
-                    ;
+
                 {
                     currentScore++;
                 }
@@ -84,7 +84,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (quizArrayList.get(currentPos).getAnswer().trim().toLowerCase().equals(option4Btn.getText().toString().trim().toLowerCase()))
-                    ;
+
                 {
                     currentScore++;
                 }
@@ -93,7 +93,6 @@ public class MainActivity2 extends AppCompatActivity {
 
                 setQuizQuestion(currentPos);
             }
-
         });
     }
     private void  showBottomSheet(){
