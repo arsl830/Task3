@@ -15,12 +15,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.quiz);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button1, button2;
+        button1 = findViewById(R.id.quiz);
+        button2 = findViewById(R.id.git);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                     startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage = Uri.parse("https://github.com/arsl830/Task3");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
             }
         });
     }
