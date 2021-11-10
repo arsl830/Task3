@@ -3,13 +3,16 @@ package com.example.task3;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -96,13 +99,31 @@ public class MainActivity2 extends AppCompatActivity {
         });
     }
     private void  showBottomSheet(){
-        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity2.this);
-        View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.score_bottom_sheet,(ConstraintLayout)findViewById(R.id.idLLScore));
-        TextView scoreTV = bottomSheetView.findViewById(R.id.textView2);
-        scoreTV.setText("Your score is \n"+currentScore + "/10");
-        bottomSheetDialog.setCancelable(false);
-        bottomSheetDialog.setContentView(bottomSheetView);
-        bottomSheetDialog.show();
+        setContentView(R.layout.score_bottom_sheet);
+        TextView text = findViewById(R.id.textView2);
+        text.setText("Your score is \n"+currentScore + "/10");
+        Button button1, button2;
+        button1= findViewById(R.id.Share);
+        button2= findViewById(R.id.main);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent I = new Intent(Intent.ACTION_SEND);
+                I.setType("text/plain");
+                String sharebody = "my score is "+currentScore+ "/10";
+                String subject = "your body here";
+                I.putExtra(Intent.EXTRA_SUBJECT,subject);
+                I.putExtra(Intent.EXTRA_TEXT,sharebody);
+                startActivity(Intent.createChooser(I,"Share using"));
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getQuizQuestion (ArrayList < Quiz > quizArrayList) {
